@@ -1,5 +1,4 @@
 const marketData = [
-  { model: "EX-H30", count: 18, overall: 8200, junk: { price: 3600, count: 4 }, good: { price: 11000, count: 8 }, fair: { price: 7900, count: 6 }, poor: { price: 5200, count: 3 }, veryPoor: { price: 3500, count: 2 } },
   { model: "EX-ZR10", count: 28, overall: 13200, junk: { price: 6300, count: 5 }, good: { price: 16800, count: 12 }, fair: { price: 13000, count: 9 }, poor: { price: 7600, count: 4 }, veryPoor: { price: 5000, count: 2 } },
   { model: "EX-ZR20", count: 20, overall: 11000, junk: { price: 6500, count: 4 }, good: { price: 14600, count: 8 }, fair: { price: 10500, count: 6 }, poor: { price: 7000, count: 3 }, veryPoor: { price: 5000, count: 2 } },
   { model: "EX-ZR50", count: 38, overall: 23500, junk: { price: 16700, count: 5 }, good: { price: 29900, count: 18 }, fair: { price: 22800, count: 12 }, poor: { price: 19000, count: 5 }, veryPoor: { price: 16700, count: 2 } },
@@ -23,10 +22,88 @@ const marketData = [
   { model: "EX-ZR3100", count: 43, overall: 32000, junk: { price: 22800, count: 4 }, good: { price: 34800, count: 21 }, fair: { price: 30300, count: 15 }, poor: { price: 26000, count: 5 }, veryPoor: { price: 20000, count: 2 } },
   { model: "EX-ZR3200", count: 50, overall: 28800, junk: { price: 12000, count: 4 }, good: { price: 33800, count: 23 }, fair: { price: 27600, count: 17 }, poor: { price: 23700, count: 6 }, veryPoor: { price: 12000, count: 2 } },
   { model: "EX-ZR4000", count: 54, overall: 32500, junk: { price: 11000, count: 4 }, good: { price: 36800, count: 27 }, fair: { price: 31800, count: 19 }, poor: { price: 27000, count: 6 }, veryPoor: { price: 17500, count: 2 } },
+  { model: "EX-ZS260", series: "STANDARD", count: 3, overall: 8500, junk: { price: 3800, count: 0 }, good: { price: 8500, count: 3 }, fair: { price: 7800, count: 0 }, poor: { price: 6300, count: 0 }, veryPoor: { price: 4300, count: 0 } },
+  { model: "EX-ZS240", series: "STANDARD", count: 40, overall: 9500, junk: { price: 3500, count: 8 }, good: { price: 10300, count: 20 }, fair: { price: 9500, count: 10 }, poor: { price: 7500, count: 6 }, veryPoor: { price: 3500, count: 4 } },
+  { model: "EX-ZS29", series: "STANDARD", count: 23, overall: 10000, junk: { price: 4300, count: 1 }, good: { price: 10000, count: 13 }, fair: { price: 9500, count: 8 }, poor: { price: 8000, count: 1 }, veryPoor: { price: 5000, count: 1 } },
+  { model: "EX-Z920", series: "STANDARD", count: 11, overall: 9000, junk: { price: 4100, count: 0 }, good: { price: 11000, count: 8 }, fair: { price: 1900, count: 1 }, poor: { price: 6800, count: 2 }, veryPoor: { price: 4500, count: 0 } },
+  { model: "EX-ZS6", series: "STANDARD", count: 60, overall: 9500, junk: { price: 5000, count: 9 }, good: { price: 11000, count: 33 }, fair: { price: 6500, count: 18 }, poor: { price: 4500, count: 7 }, veryPoor: { price: 2000, count: 2 } },
+  { model: "EX-ZS5", series: "STANDARD", count: 105, overall: 10000, junk: { price: 6000, count: 9 }, good: { price: 10500, count: 62 }, fair: { price: 9800, count: 29 }, poor: { price: 9800, count: 9 }, veryPoor: { price: 3000, count: 5 } },
+  { model: "EX-ZS35", series: "STANDARD", count: 36, overall: 9200, junk: { price: 4000, count: 4 }, good: { price: 10000, count: 25 }, fair: { price: 9000, count: 7 }, poor: { price: 3100, count: 2 }, veryPoor: { price: 4000, count: 2 } },
+  { model: "EX-ZS30", series: "STANDARD", count: 1, overall: 32800, junk: { price: 14800, count: 0 }, good: { price: 32800, count: 1 }, fair: { price: 30200, count: 0 }, poor: { price: 24300, count: 0 }, veryPoor: { price: 16400, count: 0 } },
+  { model: "EX-ZS28", series: "STANDARD", count: 33, overall: 10000, junk: { price: 5000, count: 1 }, good: { price: 10700, count: 20 }, fair: { price: 9700, count: 8 }, poor: { price: 7000, count: 5 }, veryPoor: { price: 5000, count: 0 } },
+  { model: "EX-ZS27", series: "STANDARD", count: 29, overall: 9000, junk: { price: 5000, count: 4 }, good: { price: 9600, count: 14 }, fair: { price: 9000, count: 11 }, poor: { price: 3000, count: 2 }, veryPoor: { price: 2000, count: 2 } },
+  { model: "EX-ZS26", series: "STANDARD", count: 83, overall: 9000, junk: { price: 4500, count: 8 }, good: { price: 9800, count: 45 }, fair: { price: 8200, count: 26 }, poor: { price: 7000, count: 7 }, veryPoor: { price: 4000, count: 5 } },
+  { model: "EX-ZS25", series: "STANDARD", count: 60, overall: 8000, junk: { price: 3800, count: 6 }, good: { price: 9000, count: 26 }, fair: { price: 7800, count: 26 }, poor: { price: 3600, count: 4 }, veryPoor: { price: 3000, count: 4 } },
+  { model: "EX-ZS210", series: "STANDARD", count: 41, overall: 10000, junk: { price: 5300, count: 5 }, good: { price: 11000, count: 23 }, fair: { price: 7500, count: 15 }, poor: { price: 2600, count: 2 }, veryPoor: { price: 3200, count: 1 } },
+  { model: "EX-ZS20", series: "STANDARD", count: 29, overall: 8000, junk: { price: 3600, count: 6 }, good: { price: 8100, count: 18 }, fair: { price: 9000, count: 5 }, poor: { price: 7000, count: 3 }, veryPoor: { price: 3600, count: 3 } },
+  { model: "EX-ZS190", series: "STANDARD", count: 47, overall: 7800, junk: { price: 5500, count: 10 }, good: { price: 9000, count: 22 }, fair: { price: 6500, count: 17 }, poor: { price: 6700, count: 7 }, veryPoor: { price: 3500, count: 1 } },
+  { model: "EX-ZS180", series: "STANDARD", count: 36, overall: 9000, junk: { price: 3700, count: 8 }, good: { price: 9100, count: 13 }, fair: { price: 9300, count: 14 }, poor: { price: 6000, count: 7 }, veryPoor: { price: 3500, count: 2 } },
+  { model: "EX-ZS170", series: "STANDARD", count: 22, overall: 10000, junk: { price: 2000, count: 2 }, good: { price: 12000, count: 14 }, fair: { price: 10000, count: 6 }, poor: { price: 7400, count: 0 }, veryPoor: { price: 2000, count: 2 } },
+  { model: "EX-ZS160", series: "STANDARD", count: 31, overall: 8000, junk: { price: 6000, count: 4 }, good: { price: 8800, count: 19 }, fair: { price: 8500, count: 7 }, poor: { price: 6500, count: 3 }, veryPoor: { price: 5500, count: 2 } },
+  { model: "EX-ZS150", series: "STANDARD", count: 66, overall: 8000, junk: { price: 3300, count: 7 }, good: { price: 9700, count: 32 }, fair: { price: 7800, count: 26 }, poor: { price: 6000, count: 6 }, veryPoor: { price: 3300, count: 2 } },
+  { model: "EX-ZS12", series: "STANDARD", count: 34, overall: 7500, junk: { price: 5000, count: 7 }, good: { price: 9000, count: 10 }, fair: { price: 7500, count: 14 }, poor: { price: 5000, count: 6 }, veryPoor: { price: 5400, count: 4 } },
+  { model: "EX-ZS100", series: "STANDARD", count: 28, overall: 8400, junk: { price: 4000, count: 2 }, good: { price: 10000, count: 12 }, fair: { price: 8000, count: 14 }, poor: { price: 6200, count: 0 }, veryPoor: { price: 3200, count: 2 } },
+  { model: "EX-ZS10", series: "STANDARD", count: 63, overall: 8500, junk: { price: 5000, count: 4 }, good: { price: 9000, count: 30 }, fair: { price: 8800, count: 21 }, poor: { price: 5900, count: 6 }, veryPoor: { price: 4200, count: 6 } },
+  { model: "EX-Z910", series: "STANDARD", count: 5, overall: 10700, junk: { price: 4800, count: 0 }, good: { price: 10700, count: 4 }, fair: { price: 8000, count: 1 }, poor: { price: 7900, count: 0 }, veryPoor: { price: 5400, count: 0 } },
+  { model: "EX-Z900", series: "STANDARD", count: 79, overall: 13800, junk: { price: 4500, count: 8 }, good: { price: 18500, count: 40 }, fair: { price: 12000, count: 31 }, poor: { price: 4500, count: 5 }, veryPoor: { price: 7500, count: 3 } },
+  { model: "EX-Z90", series: "STANDARD", count: 77, overall: 8400, junk: { price: 4700, count: 8 }, good: { price: 9000, count: 39 }, fair: { price: 8500, count: 22 }, poor: { price: 5000, count: 11 }, veryPoor: { price: 5000, count: 5 } },
+  { model: "EX-Z9", series: "STANDARD", count: 8, overall: 6500, junk: { price: 2900, count: 0 }, good: { price: 6500, count: 4 }, fair: { price: 5500, count: 2 }, poor: { price: 3200, count: 2 }, veryPoor: { price: 3300, count: 0 } },
+  { model: "EX-Z880", series: "STANDARD", count: 16, overall: 8500, junk: { price: 3500, count: 1 }, good: { price: 9800, count: 13 }, fair: { price: 6000, count: 3 }, poor: { price: 6300, count: 0 }, veryPoor: { price: 4300, count: 0 } },
+  { model: "EX-Z88", series: "STANDARD", count: 3, overall: 10500, junk: { price: 4700, count: 0 }, good: { price: 10500, count: 3 }, fair: { price: 9700, count: 0 }, poor: { price: 7800, count: 0 }, veryPoor: { price: 5300, count: 0 } },
+  { model: "EX-Z85", series: "STANDARD", count: 68, overall: 8800, junk: { price: 5000, count: 2 }, good: { price: 10800, count: 29 }, fair: { price: 8400, count: 28 }, poor: { price: 6300, count: 8 }, veryPoor: { price: 2600, count: 3 } },
+  { model: "EX-Z800", series: "STANDARD", count: 99, overall: 15000, junk: { price: 7000, count: 6 }, good: { price: 18000, count: 50 }, fair: { price: 14500, count: 35 }, poor: { price: 12500, count: 11 }, veryPoor: { price: 12900, count: 3 } },
+  { model: "EX-Z780", series: "STANDARD", count: 23, overall: 9400, junk: { price: 2800, count: 2 }, good: { price: 10400, count: 14 }, fair: { price: 7500, count: 8 }, poor: { price: 5000, count: 1 }, veryPoor: { price: 4700, count: 0 } },
+  { model: "EX-Z770", series: "STANDARD", count: 32, overall: 9100, junk: { price: 3700, count: 3 }, good: { price: 9300, count: 19 }, fair: { price: 9100, count: 10 }, poor: { price: 3700, count: 2 }, veryPoor: { price: 1400, count: 1 } },
+  { model: "EX-Z690", series: "STANDARD", count: 14, overall: 7800, junk: { price: 3500, count: 0 }, good: { price: 9900, count: 7 }, fair: { price: 7400, count: 4 }, poor: { price: 5000, count: 3 }, veryPoor: { price: 3900, count: 0 } },
+  { model: "EX-Z680", series: "STANDARD", count: 6, overall: 5000, junk: { price: 2300, count: 0 }, good: { price: 6700, count: 3 }, fair: { price: 5000, count: 3 }, poor: { price: 3700, count: 0 }, veryPoor: { price: 2500, count: 0 } },
+  { model: "EX-Z550", series: "STANDARD", count: 110, overall: 12300, junk: { price: 5000, count: 9 }, good: { price: 14400, count: 64 }, fair: { price: 10800, count: 36 }, poor: { price: 8500, count: 7 }, veryPoor: { price: 6800, count: 3 } },
+  { model: "EX-Z450", series: "STANDARD", count: 96, overall: 8500, junk: { price: 4100, count: 14 }, good: { price: 8800, count: 42 }, fair: { price: 9000, count: 36 }, poor: { price: 4100, count: 11 }, veryPoor: { price: 4500, count: 7 } },
+  { model: "EX-Z400", series: "STANDARD", count: 164, overall: 10000, junk: { price: 4000, count: 17 }, good: { price: 11800, count: 83 }, fair: { price: 8300, count: 55 }, poor: { price: 6800, count: 20 }, veryPoor: { price: 4000, count: 6 } },
+  { model: "EX-Z370", series: "STANDARD", count: 34, overall: 7000, junk: { price: 5000, count: 7 }, good: { price: 9100, count: 14 }, fair: { price: 6700, count: 11 }, poor: { price: 5000, count: 6 }, veryPoor: { price: 5000, count: 3 } },
+  { model: "EX-Z37", series: "STANDARD", count: 2, overall: 9100, junk: { price: 4100, count: 0 }, good: { price: 10000, count: 1 }, fair: { price: 8200, count: 1 }, poor: { price: 6700, count: 0 }, veryPoor: { price: 4600, count: 0 } },
+  { model: "EX-Z35", series: "STANDARD", count: 1, overall: 11100, junk: { price: 5000, count: 0 }, good: { price: 11100, count: 1 }, fair: { price: 10200, count: 0 }, poor: { price: 8200, count: 0 }, veryPoor: { price: 5600, count: 0 } },
+  { model: "EX-Z330", series: "STANDARD", count: 71, overall: 6500, junk: { price: 3500, count: 13 }, good: { price: 7800, count: 35 }, fair: { price: 6300, count: 24 }, poor: { price: 5500, count: 8 }, veryPoor: { price: 3000, count: 4 } },
+  { model: "EX-Z33", series: "STANDARD", count: 10, overall: 4100, junk: { price: 2000, count: 2 }, good: { price: 5000, count: 4 }, fair: { price: 3500, count: 4 }, poor: { price: 4100, count: 1 }, veryPoor: { price: 3300, count: 1 } },
+  { model: "EX-Z31", series: "STANDARD", count: 9, overall: 8800, junk: { price: 4000, count: 1 }, good: { price: 11500, count: 5 }, fair: { price: 6500, count: 2 }, poor: { price: 8800, count: 1 }, veryPoor: { price: 4000, count: 1 } },
+  { model: "EX-Z3000", series: "STANDARD", count: 50, overall: 15700, junk: { price: 5800, count: 5 }, good: { price: 16000, count: 25 }, fair: { price: 16800, count: 18 }, poor: { price: 14000, count: 4 }, veryPoor: { price: 5000, count: 3 } },
+  { model: "EX-Z29", series: "STANDARD", count: 5, overall: 4800, junk: { price: 2800, count: 2 }, good: { price: 4800, count: 1 }, fair: { price: 7200, count: 3 }, poor: { price: 2800, count: 1 }, veryPoor: { price: 2400, count: 0 } },
+  { model: "EX-Z28", series: "STANDARD", count: 29, overall: 8500, junk: { price: 5000, count: 1 }, good: { price: 9000, count: 15 }, fair: { price: 7700, count: 10 }, poor: { price: 6000, count: 3 }, veryPoor: { price: 5000, count: 1 } },
+  { model: "EX-Z270", series: "STANDARD", count: 133, overall: 8000, junk: { price: 4400, count: 21 }, good: { price: 9800, count: 55 }, fair: { price: 7700, count: 56 }, poor: { price: 4400, count: 12 }, veryPoor: { price: 4200, count: 10 } },
+  { model: "EX-Z27", series: "STANDARD", count: 10, overall: 7500, junk: { price: 3200, count: 2 }, good: { price: 8000, count: 3 }, fair: { price: 7500, count: 5 }, poor: { price: 3200, count: 1 }, veryPoor: { price: 14900, count: 1 } },
+  { model: "EX-Z2300", series: "STANDARD", count: 182, overall: 18000, junk: { price: 7800, count: 24 }, good: { price: 21000, count: 93 }, fair: { price: 18000, count: 61 }, poor: { price: 10900, count: 20 }, veryPoor: { price: 7500, count: 8 } },
+  { model: "EX-Z2000", series: "STANDARD", count: 145, overall: 13000, junk: { price: 6700, count: 15 }, good: { price: 14800, count: 79 }, fair: { price: 12900, count: 42 }, poor: { price: 9000, count: 16 }, veryPoor: { price: 4000, count: 8 } },
+  { model: "EX-Z20", series: "STANDARD", count: 3, overall: 7000, junk: { price: 3200, count: 0 }, good: { price: 7000, count: 2 }, fair: { price: 7000, count: 1 }, poor: { price: 5200, count: 0 }, veryPoor: { price: 3500, count: 0 } },
+  { model: "EX-Z2", series: "STANDARD", count: 10, overall: 3900, junk: { price: 3700, count: 5 }, good: { price: 4400, count: 0 }, fair: { price: 4900, count: 4 }, poor: { price: 3500, count: 1 }, veryPoor: { price: 3800, count: 5 } },
+  { model: "EX-Z16", series: "STANDARD", count: 7, overall: 6000, junk: { price: 1800, count: 1 }, good: { price: 7000, count: 2 }, fair: { price: 1800, count: 2 }, poor: { price: 3000, count: 2 }, veryPoor: { price: 1700, count: 1 } },
+  { model: "EX-Z1", series: "STANDARD", count: 31, overall: 6200, junk: { price: 3200, count: 7 }, good: { price: 8500, count: 9 }, fair: { price: 6200, count: 11 }, poor: { price: 5500, count: 9 }, veryPoor: { price: 4000, count: 2 } },
+  { model: "EX-S200", series: "STANDARD", count: 33, overall: 9000, junk: { price: 5000, count: 3 }, good: { price: 8500, count: 21 }, fair: { price: 10000, count: 11 }, poor: { price: 6700, count: 0 }, veryPoor: { price: 5000, count: 1 } },
+  { model: "EX-S12", series: "STANDARD", count: 23, overall: 5700, junk: { price: 2200, count: 5 }, good: { price: 7800, count: 11 }, fair: { price: 6300, count: 3 }, poor: { price: 5700, count: 5 }, veryPoor: { price: 2200, count: 4 } },
+  { model: "EX-N10", series: "STANDARD", count: 12, overall: 10500, junk: { price: 4700, count: 0 }, good: { price: 13000, count: 9 }, fair: { price: 7500, count: 2 }, poor: { price: 7800, count: 0 }, veryPoor: { price: 5400, count: 1 } },
+  { model: "EX-N1", series: "STANDARD", count: 11, overall: 9100, junk: { price: 4100, count: 0 }, good: { price: 10500, count: 7 }, fair: { price: 9100, count: 3 }, poor: { price: 6700, count: 0 }, veryPoor: { price: 7300, count: 1 } },
+  { model: "EX-JE10", series: "STANDARD", count: 5, overall: 7800, junk: { price: 3500, count: 0 }, good: { price: 9500, count: 2 }, fair: { price: 6800, count: 3 }, poor: { price: 5800, count: 0 }, veryPoor: { price: 3900, count: 0 } },
+  { model: "EX-H60", series: "STANDARD", count: 29, overall: 8500, junk: { price: 5500, count: 5 }, good: { price: 9700, count: 18 }, fair: { price: 7500, count: 4 }, poor: { price: 5000, count: 3 }, veryPoor: { price: 5000, count: 4 } },
+  { model: "EX-H50", series: "STANDARD", count: 31, overall: 8000, junk: { price: 4500, count: 6 }, good: { price: 9400, count: 13 }, fair: { price: 8000, count: 9 }, poor: { price: 6000, count: 7 }, veryPoor: { price: 4500, count: 2 } },
+  { model: "EX-H5", series: "STANDARD", count: 3, overall: 7000, junk: { price: 3200, count: 0 }, good: { price: 7800, count: 0 }, fair: { price: 7000, count: 3 }, poor: { price: 5200, count: 0 }, veryPoor: { price: 3500, count: 0 } },
+  { model: "EX-H30", series: "STANDARD", count: 36, overall: 7800, junk: { price: 4500, count: 7 }, good: { price: 8800, count: 19 }, fair: { price: 5300, count: 11 }, poor: { price: 4500, count: 4 }, veryPoor: { price: 4000, count: 2 } },
+  { model: "EX-H20G", series: "STANDARD", count: 29, overall: 9200, junk: { price: 1900, count: 2 }, good: { price: 9200, count: 19 }, fair: { price: 9100, count: 6 }, poor: { price: 6800, count: 2 }, veryPoor: { price: 4800, count: 2 } },
+  { model: "EX-H15", series: "STANDARD", count: 175, overall: 12500, junk: { price: 5000, count: 17 }, good: { price: 14700, count: 100 }, fair: { price: 11500, count: 53 }, poor: { price: 6500, count: 15 }, veryPoor: { price: 5000, count: 7 } },
+  { model: "EX-H10", series: "STANDARD", count: 174, overall: 10900, junk: { price: 4500, count: 17 }, good: { price: 12000, count: 102 }, fair: { price: 10000, count: 49 }, poor: { price: 7500, count: 12 }, veryPoor: { price: 4500, count: 11 } },
+  { model: "EX-G1", series: "STANDARD", count: 21, overall: 5900, junk: { price: 3000, count: 4 }, good: { price: 7500, count: 8 }, fair: { price: 6400, count: 6 }, poor: { price: 3000, count: 5 }, veryPoor: { price: 2000, count: 2 } },
 ];
 
 const modelCollator = new Intl.Collator("ja-JP", { numeric: true, sensitivity: "base" });
-const sortedMarketData = [...marketData].sort((a, b) => modelCollator.compare(a.model, b.model));
+const seriesOrder = { "HIGH SPEED": 0, STANDARD: 1 };
+
+function getSeries(item) {
+  if (item.series) return item.series;
+  if (/^EX-(ZR|FC|FH|FS|SC)/.test(item.model)) return "HIGH SPEED";
+  return "STANDARD";
+}
+
+const sortedMarketData = [...marketData].sort((a, b) => {
+  const seriesDiff = (seriesOrder[getSeries(a)] ?? 9) - (seriesOrder[getSeries(b)] ?? 9);
+  return seriesDiff || modelCollator.compare(a.model, b.model);
+});
 
 const colorRules = {
   silver: { label: "シルバー", factor: 1, note: "基準色として補正なし" },
@@ -96,13 +173,57 @@ const thresholdText = document.querySelector("#thresholdText");
 const priceBars = document.querySelector("#priceBars");
 const modelCount = document.querySelector("#modelCount");
 const marketTable = document.querySelector("#marketTable");
+const seriesSelect = document.querySelector("#seriesSelect");
+const datasetStatus = document.querySelector("#datasetStatus");
 
 function roundToHundred(value) {
   return Math.round(value / 100) * 100;
 }
 
 function getModel() {
-  return marketData.find((item) => item.model === modelSelect.value) || sortedMarketData[0];
+  return marketData.find((item) => item.model === modelSelect.value) || filteredMarketData()[0] || sortedMarketData[0];
+}
+
+function activeSeries() {
+  return seriesSelect?.value || "all";
+}
+
+function filteredMarketData() {
+  const selected = activeSeries();
+  return sortedMarketData.filter((item) => selected === "all" || getSeries(item) === selected);
+}
+
+function renderModelOptions() {
+  const selectedModel = modelSelect.value;
+  const rows = filteredMarketData();
+  const groups = rows.reduce((acc, item) => {
+    const series = getSeries(item);
+    acc[series] = acc[series] || [];
+    acc[series].push(item);
+    return acc;
+  }, {});
+
+  modelSelect.innerHTML = Object.entries(groups)
+    .map(
+      ([series, items]) => `
+        <optgroup label="${series}">
+          ${items.map((item) => `<option value="${item.model}">${item.model}</option>`).join("")}
+        </optgroup>
+      `,
+    )
+    .join("");
+
+  if (rows.some((item) => item.model === selectedModel)) {
+    modelSelect.value = selectedModel;
+  } else {
+    modelSelect.value = rows[0]?.model || "";
+  }
+
+  if (datasetStatus) {
+    const highSpeedCount = marketData.filter((item) => getSeries(item) === "HIGH SPEED").length;
+    const standardCount = marketData.filter((item) => getSeries(item) === "STANDARD").length;
+    datasetStatus.textContent = `${marketData.length}型番 / HIGH SPEED ${highSpeedCount} / STANDARD ${standardCount}`;
+  }
 }
 
 function getBasePrice(model, basis) {
@@ -183,7 +304,7 @@ function renderBars(model) {
     color: colors.adjusted,
   });
 
-  modelCount.textContent = `${model.count}件 / ${color.note}`;
+  modelCount.textContent = `${getSeries(model)} / ${model.count}件 / ${color.note}`;
   priceBars.innerHTML = rows
     .map((row) => {
       const width = maxPrice ? Math.max(5, Math.round((row.price / maxPrice) * 100)) : 0;
@@ -202,13 +323,15 @@ function renderBars(model) {
 
 function renderTable() {
   const query = normalize(tableSearch.value);
-  marketTable.innerHTML = sortedMarketData
+  marketTable.innerHTML = filteredMarketData()
     .filter((item) => normalize(item.model).includes(query))
     .map((item) => {
       const selected = item.model === modelSelect.value ? "selected" : "";
+      const series = getSeries(item);
       return `
         <tr class="${selected}" data-model="${item.model}">
           <td>${item.model}</td>
+          <td><span class="series-badge ${series === "HIGH SPEED" ? "high-speed" : "standard"}">${series}</span></td>
           <td>${yen.format(item.overall)}</td>
           <td>${yen.format(item.junk.price)}</td>
           <td>${yen.format(item.good.price)}</td>
@@ -242,7 +365,7 @@ function renderCalculator() {
   if (!buyPrice) {
     decisionMark.textContent = "△";
     decisionLabel.textContent = "仕入れ金額を入力";
-    decisionNote.textContent = `${model.model} / ${color.label} / ${basisLabels[basisSelect.value]} ${yen.format(salePrice)} を基準に計算します。`;
+    decisionNote.textContent = `${model.model} / ${getSeries(model)} / ${color.label} / ${basisLabels[basisSelect.value]} ${yen.format(salePrice)} を基準に計算します。`;
   } else if (result === "circle") {
     decisionMark.textContent = "○";
     decisionLabel.textContent = "仕入れ候補";
@@ -273,10 +396,8 @@ function renderCalculator() {
 }
 
 function init() {
-  modelSelect.innerHTML = sortedMarketData
-    .map((item) => `<option value="${item.model}">${item.model}</option>`)
-    .join("");
-
+  seriesSelect.value = "all";
+  renderModelOptions();
   modelSelect.value = "EX-ZR1000";
   colorSelect.value = "silver";
   basisSelect.value = "overall";
@@ -287,6 +408,12 @@ function init() {
 }
 
 modelSelect.addEventListener("change", () => {
+  updateSalePriceFromSelection();
+  renderCalculator();
+});
+
+seriesSelect.addEventListener("change", () => {
+  renderModelOptions();
   updateSalePriceFromSelection();
   renderCalculator();
 });
@@ -323,6 +450,8 @@ marketTable.addEventListener("click", (event) => {
   renderCalculator();
 });
 document.querySelector("#resetButton").addEventListener("click", () => {
+  seriesSelect.value = "all";
+  renderModelOptions();
   modelSelect.value = "EX-ZR1000";
   colorSelect.value = "silver";
   basisSelect.value = "overall";

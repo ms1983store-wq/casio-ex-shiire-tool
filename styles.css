@@ -422,7 +422,7 @@ select:focus {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 780px;
+  min-width: 900px;
 }
 
 th,
@@ -440,6 +440,11 @@ td:first-child {
   font-weight: 700;
 }
 
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: left;
+}
+
 th {
   position: sticky;
   top: 0;
@@ -455,6 +460,30 @@ tbody tr {
 tbody tr:hover,
 tbody tr.selected {
   background: #eef8f5;
+}
+
+.series-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.series-badge.high-speed {
+  background: #e7f4f2;
+  border-color: #b8ded8;
+  color: var(--teal-dark);
+}
+
+.series-badge.standard {
+  background: #fff6df;
+  border-color: #efd69a;
+  color: #7a4b00;
 }
 
 .negative {
